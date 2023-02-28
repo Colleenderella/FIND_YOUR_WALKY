@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  # get "/profile", to: "profile#profile"
+  get "/profile", to: "profile#profile"
   # Defines the root path route ("/")
   # root "articles#index"
   resources :companions
