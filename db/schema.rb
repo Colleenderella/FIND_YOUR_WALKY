@@ -29,7 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_27_165155) do
 
   create_table "companions", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "companion_type"
     t.string "offer_details"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
