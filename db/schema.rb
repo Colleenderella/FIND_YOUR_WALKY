@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_27_165155) do
   end
 
   create_table "companions", force: :cascade do |t|
+    t.string "name"
     t.string "type"
     t.string "offer_details"
     t.bigint "user_id", null: false
