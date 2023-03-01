@@ -7,5 +7,5 @@ class PagesController < ApplicationController
       "https://images.unsplash.com/photo-1612170153139-6f881ff067e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2hpY2tlbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
       "https://images.unsplash.com/photo-1521217155737-0d5632e9813f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dHVydGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
       ]
-    end
+  end
 end
