@@ -13,6 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @companion = Companion.find(params[:id])
     @booking.companion = @companion
+    @booking.status = 0
     if @booking.save
       redirect_to booking_path(@booking)
     else
@@ -23,6 +24,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:status, :location, :date, :time)
+    params.require(:booking).permit(:location, :date, :time)
   end
 end
