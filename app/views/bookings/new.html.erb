@@ -1,0 +1,9 @@
+<h1>Request your Companion</h1>
+
+<%= simple_form_for [@companion, @booking] do |f| %>
+  <%= f.input :status %>
+  <%= f.input :location %>
+  <%= f.input :date %>
+  <%= f.input :time %>
+  <%= f.submit %>
+<% end %>
