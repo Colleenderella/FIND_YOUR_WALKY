@@ -6,6 +6,7 @@ class CompanionsController < ApplicationController
   # end
 
   def show
+    @companion = Companion.find(params[:id])
   end
 
   def new
