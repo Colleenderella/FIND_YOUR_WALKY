@@ -1,1 +1,8 @@
-<h1>These are the details of our companions</h1>
+<h1>Hi, my name is <%= @companion.name %></h1>
+
+<%= link_to "Book #{@companion.name}",
+    new_companion_booking_path(@companion),
+    class: "btn btn-primary"
+%>
+
+<p><%= link_to "Go back", companion_path %></p>
