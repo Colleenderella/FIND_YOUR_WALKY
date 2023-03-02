@@ -18,3 +18,10 @@
 .footer .fas {
   color: rgb(181, 68, 198);
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}

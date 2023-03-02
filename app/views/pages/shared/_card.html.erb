@@ -1,12 +1,12 @@
-
-
-      <div class="card">
-      <div class="card-image-container">
-        <img src= <%= image %> />
-      </div>
-        <div class="card-content">
-          <h2><%= companion.name %></h2>
-          <h3><%= companion.companion_type%></h3>
-          <p><%=companion.offer_details%></p>
-        </div>
-      </div>
+<%= link_to companion do %>
+  <div class="card">
+  <div class="card-image-container">
+    <img src= <%= image %> />
+  </div>
+    <div class="card-content">
+      <h2><%=companion.name %></h2>
+      <h3><%= companion.companion_type%></h3>
+      <p><%=companion.offer_details%></p>
+    </div>
+  </div>
+<% end %>

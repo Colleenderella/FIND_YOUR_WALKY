@@ -9,13 +9,14 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(Booking_params)
+    @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @companion = Companion.find(params[:id])
+    @companion = Companion.find(params[:companion_id])
     @booking.companion = @companion
     @booking.status = 0
+
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to profile_path
     else
       render :new, status: :unprocessable_entity
     end
