@@ -17,7 +17,8 @@
   <div class="container">
       <div class="cards">
         <% @companions.each do |companion|  %>
-          <%= render partial: "pages/shared/card", locals: { companion: companion, image: @images.sample } %>
+          <%= render partial: "pages/shared/card", locals: { companion: companion } %>
+          <%# <%= render partial: "pages/shared/card", locals: { companion: companion, image: @images.sample } %>
         <% end %>
       </div>
   </div>
