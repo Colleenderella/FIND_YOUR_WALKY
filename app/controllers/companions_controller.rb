@@ -41,6 +41,6 @@ class CompanionsController < ApplicationController
   end
 
   def companion_params
-    params.require(:companion).permit(:name, :companion_type, :offer_details)
+    params.require(:companion).permit(:name, :companion_type, :offer_details, :photo)
   end
 end
