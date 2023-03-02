@@ -1,7 +1,11 @@
-<h1>Your booking was successful!</h1>
-<%= current_user.email %>
+<div class="profile-page-container">
+<div class="profile-card">
+  <div class="card-header">
+    <h1>Welcome to your profile page</h1>
+      <%# <%= current_user.email %>
+  </div>
 
-<h3>My Companions</h3>
+<h3>My Companions:</h3>
 
 <ul>
   <% @companions.each do |companion| %>
@@ -28,7 +32,7 @@
   <% end %>
 </ul>
 
-<h3>My Bookings</h3>
+<h3>My Bookings:</h3>
 
 <ul>
   <% @bookings.each do |booking| %>
@@ -38,3 +42,5 @@
     </li>
   <% end %>
 </ul>
+</div>
+</div>

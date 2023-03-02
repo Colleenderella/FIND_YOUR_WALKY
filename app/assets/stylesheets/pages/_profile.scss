@@ -1,0 +1,34 @@
+@import "home";
+
+.profile-page-container {
+background-color: $background-gray;
+text-align: center;
+}
+
+.profile-card {
+  width: 400px;
+  height: 600px;
+  border: 1px solid $yellow;
+  border-radius: 15px;
+  margin: auto;
+
+}
+.card-header {
+  background-color: $light-yellow;
+}
+
+.profile-card h1 {
+  font-size: 24;
+  color: $yellow;
+}
+
+.profile-card h3 {
+  font-size: 10;
+  color: $light-gray;
+  text-align: left;
+  padding-left: 10px;
+}
+.profile-card ul li {
+  text-decoration: none;
+  color: $pink;
+}
