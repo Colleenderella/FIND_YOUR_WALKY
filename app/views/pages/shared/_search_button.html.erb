@@ -1,8 +1,13 @@
-<%= form_with url: root_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find your companion"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+<%= form_with url: root_path, method: :get  do %>
+  <div class="search">
+    <%= text_field_tag :query,
+      params[:query],
+      class: "input",
+      placeholder: "Find your companion"
+    %>
+    <%= submit_tag "Search", class: "button" %>
+  </div>
 <% end %>
+<%# class: "d-flex" %>
+<%# form-control string required %>
+ <%# btn-flat %>
