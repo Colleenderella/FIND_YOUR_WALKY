@@ -7,18 +7,20 @@
   <body>
 
  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1667864299172-7f5b748655ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
-  <div class=“container”>
+  <div class=“banner-container”>
     <h1>Find your <strong>Walky</strong></h1>
     <p>Are you tired of walking alone?</p>
-  </div>
 </div>
-
-  <div class="container">
-      <div class="cards">
+</div>
+<div class="container">
+<div class="cards-container">
+      <%# <div class="cards"> %>
         <% @companions.each do |companion|  %>
           <%= render partial: "pages/shared/card", locals: { companion: companion, image: @images.sample } %>
         <% end %>
-      </div>
+      <%# </div> %>
   </div>
+</div>
+</div>
 </body>
 </html>
