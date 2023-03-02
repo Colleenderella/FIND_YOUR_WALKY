@@ -55,9 +55,10 @@ Companion.create!([
 {
   name: "Missy",
   companion_type: "Hippo",
-  offer_details: "Oreo is the cutest new swimmer in town, she's an ideal walking buddy as well, book her now and enjoy
+  offer_details: "Missy is the cutest new swimmer in town, she's an ideal walking buddy as well, book her now and enjoy
   your new favorite exercise!",
   user: louise
-}])
+}
+])
 
 p "Created #{Companion.count} Companions"

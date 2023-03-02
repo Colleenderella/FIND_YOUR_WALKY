@@ -1,12 +1,23 @@
 // Define variables for your color scheme
 
 // For example:
-$red: #FD1015;
-$blue: #0D6EFD;
+
 $yellow: #e9c810;
 $light-yellow:rgb(246, 242, 200);
 $orange: #E67E22;
-$green: #1EDD88;
-$gray: #0E0000;
-$light-gray: #4e4d4d;
+$background-gray: #f9f6f3;
+$gray: #2e2e2e;
+$light-gray: #88857c;
 $black: #040404;
+$pink:rgb(181, 68, 198);
+
+$blue: rgb(89, 89, 240);
+$green: rgb(70, 109, 41);
+$info-yellow: #ffe59e;
+$red: rgb(251, 71, 1);
+
+
+$primary: $blue;
+$success: $green;
+$info: $info-yellow;
+$danger: $red;
