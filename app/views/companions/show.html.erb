@@ -1,23 +1,24 @@
 <%# <h1>Hi, my name is <%= @companion.name %>
 <%# <h3>I´m a <%= @companion.companion_type %>
 <%# <img src="https://images.unsplash.com/photo-1583867195148-e869329c07b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dCUyMHJleHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" class="img-thumbnail w-25 p-3"> %>
-
-<div class="card-show mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="https://images.unsplash.com/photo-1583867195148-e869329c07b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dCUyMHJleHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body-show">
-        <h5 class="card-title-show"><%=@companion.name%></h5>
-        <p class="card-text-show"><%=@companion.companion_type %></p>
-        <p class="card-text-show"><small><%= @companion.offer_details %></small></p>
+<div class="container">
+  <div class="card-show mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://images.unsplash.com/photo-1583867195148-e869329c07b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dCUyMHJleHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body-show">
+          <h5 class="card-title-show"><%=@companion.name%></h5>
+          <p class="card-text-show"><%=@companion.companion_type %></p>
+          <p class="card-text-show"><small><%= @companion.offer_details %></small></p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<%= link_to "Book #{@companion.name}",
-    new_companion_booking_path(@companion),
-    class: "btn btn-primary"
-%>
+  <%= link_to "Book #{@companion.name}",
+      new_companion_booking_path(@companion),
+      class: "btn btn-primary"
+  %>
+</div>

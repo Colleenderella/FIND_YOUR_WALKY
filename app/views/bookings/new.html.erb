@@ -1,8 +1,11 @@
-<h1>Request your Companion</h1>
+<div class="container">
+  <h1>Request your Companion</h1>
 
-<%= simple_form_for [@companion, @booking] do |f| %>
-  <%= f.input :location %>
-  <%= f.input :date %>
-  <%= f.input :time %>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for [@companion, @booking] do |f| %>
+    <%= f.input :location , input_html: { size: 20}%>
+    <p>Date: <%= f.date_field :date %>
+    Time: <%= f.time_field :time %>
+    <%= f.submit %> </p>
+  <% end %>
+
+</div>
