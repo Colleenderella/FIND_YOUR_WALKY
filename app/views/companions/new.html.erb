@@ -1,0 +1,9 @@
+<div class="container">
+<%= simple_form_for [@companion] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :companion_type, as: :select, collection: ["Turtoise", "Chicken", "Hippo", "T-Rex", "Kangaroo"] %>
+  <%= f.input :offer_details %>
+  <%= f.input :photo, as: :file, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
+  <%= f.submit "Add your companion", class: "btn btn-flat" %>
+<% end %>
+</div>

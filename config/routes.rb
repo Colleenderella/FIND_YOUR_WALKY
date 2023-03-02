@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   resources :companions do
     resources :bookings, only: [:new, :create]
   end
+
+  get '/bookings/:id/accept', to: 'bookings#accept', as: 'booking_accept'
+  get '/bookings/:id/decline', to: 'bookings#decline', as: 'booking_decline'
+
 end

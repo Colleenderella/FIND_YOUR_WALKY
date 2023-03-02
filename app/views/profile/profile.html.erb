@@ -1,1 +1,40 @@
 <h1>Your booking was successful!</h1>
+<%= current_user.email %>
+
+<h3>My Companions</h3>
+
+<ul>
+  <% @companions.each do |companion| %>
+    <li><%= link_to companion.name, companion_path(companion) %>
+      <ul>
+        <% companion.bookings.each do |booking| %>
+        <li>
+          <div>
+            <% if booking.status == "pending"  %>
+              <%= link_to booking_accept_path(booking) do %>
+                <i class="fa-regular fa-square-check"></i>
+              <% end %>
+              <%= link_to booking_decline_path(booking) do %>
+                <i class="fa-solid fa-square-check"></i>
+              <% end %>
+            <% else %>
+              <%= booking.user.email %>
+            <% end %>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>
+
+<h3>My Bookings</h3>
+
+<ul>
+  <% @bookings.each do |booking| %>
+    <li>
+      <%= link_to booking.companion.name, companion_path(booking.companion) %>
+      <%= booking.date %>
+    </li>
+  <% end %>
+</ul>
