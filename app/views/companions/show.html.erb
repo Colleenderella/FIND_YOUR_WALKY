@@ -1,3 +1,10 @@
+<html>
+<body>
+  <%# <h1><%=@companion.companion_type%>
+  <div class="blog-wrapper">
+    <div class="blog-card-show">
+      <div class="card-show-img"><img src="https://images.unsplash.com/photo-1583867195148-e869329c07b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dCUyMHJleHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60">
+        <h1><%=@companion.name%></h1>
 <%# <h1>Hi, my name is <%= @companion.name %>
 <%# <h3>I´m a <%= @companion.companion_type %>
 <%# <img src="https://images.unsplash.com/photo-1583867195148-e869329c07b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dCUyMHJleHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" class="img-thumbnail w-25 p-3"> %>
@@ -15,18 +22,10 @@
 
         <%# <img src="https://images.unsplash.com/photo-1583867195148-e869329c07b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dCUyMHJleHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" class="img-fluid rounded-start" alt="..."> %>
       </div>
-      <div class="col-md-8">
-        <div class="card-body-show">
-          <h5 class="card-title-show"><%=@companion.name%></h5>
-          <p class="card-text-show"><%=@companion.companion_type %></p>
-          <p class="card-text-show"><small><%= @companion.offer_details %></small></p>
-        </div>
+      <div class="card-show-details"><span><i class="fa fa-calendar"></i>MAR 3</span><span><i class="fa fa-heart"></i>102</span></div>
+      <div class="card-show-text"><p><%=@companion.offer_details%></p></div>
+      <div class="read-more"><%= link_to "Book #{@companion.name}", new_companion_booking_path(@companion)%>
       </div>
     </div>
-  </div>
-
-  <%= link_to "Book #{@companion.name}",
-      new_companion_booking_path(@companion),
-      class: "btn btn-primary"
-  %>
-</div>
+  </body>
+</html>
