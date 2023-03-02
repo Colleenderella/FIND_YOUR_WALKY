@@ -27,5 +27,13 @@
       <div class="read-more"><%= link_to "Book #{@companion.name}", new_companion_booking_path(@companion)%>
       </div>
     </div>
+
+
+
+
+
+
+    <%= link_to "Delete this companion", companion_path(@companion), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
   </body>
 </html>

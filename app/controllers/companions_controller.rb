@@ -32,10 +32,10 @@ class CompanionsController < ApplicationController
   #   redirect_to companion_path(@companion)
   # end
 
-  # def destroy
-  #   @companion.destroy
-  #   redirect_to companions_path, status: :see_other
-  # end
+  def destroy
+    @companion.destroy
+    redirect_to companions_path, status: :see_other
+  end
 
   private
 
