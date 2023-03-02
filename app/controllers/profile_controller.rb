@@ -8,3 +8,4 @@ class ProfileController < ApplicationController
     @companions = @user.companions
     @bookings = @user.bookings
   end
+end
