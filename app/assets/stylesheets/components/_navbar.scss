@@ -18,7 +18,11 @@
   color: $yellow;
 }
 
-.nav-item dropdown {
+// .nav-item dropdown {
+//   background-color: $gray;
+//   color: $yellow;
+// }
+.dropdown-menu {
   background-color: $gray;
-  color: $yellow;
+  box-shadow: none;
 }
