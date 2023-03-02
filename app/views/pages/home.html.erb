@@ -10,13 +10,16 @@
   <div class=“banner-container”>
     <h1>Find your <strong>Walky</strong></h1>
     <p>Are you tired of walking alone?</p>
+    <%= render partial: "pages/shared/search_button" %>
+  </div>
 </div>
 </div>
 <div class="container">
 <div class="cards-container">
       <%# <div class="cards"> %>
         <% @companions.each do |companion|  %>
-          <%= render partial: "pages/shared/card", locals: { companion: companion, image: @images.sample } %>
+          <%= render partial: "pages/shared/card", locals: { companion: companion } %>
+          <%# <%= render partial: "pages/shared/card", locals: { companion: companion, image: @images.sample } %>
         <% end %>
       <%# </div> %>
   </div>
