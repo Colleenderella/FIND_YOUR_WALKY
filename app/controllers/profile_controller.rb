@@ -1,4 +1,10 @@
 class ProfileController < ApplicationController
-  def profile
+  def index
+    @users = Users.all
   end
-end
+
+  def profile
+    @user = current_user
+    @companions = @user.companions
+    @bookings = @user.bookings
+  end
