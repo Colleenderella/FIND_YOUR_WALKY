@@ -6,5 +6,5 @@ class ProfileController < ApplicationController
   def profile
     @user = current_user
     @companions = @user.companions
+    @bookings = @user.bookings
   end
-end
