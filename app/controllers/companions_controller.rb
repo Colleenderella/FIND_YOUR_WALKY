@@ -1,5 +1,5 @@
 class CompanionsController < ApplicationController
-  before_action :set_companion, only: [:show]
+  before_action :set_companion, only: [:show, :destroy]
 
   # def index
   #   @companions = Companion.all
@@ -34,7 +34,7 @@ class CompanionsController < ApplicationController
 
   def destroy
     @companion.destroy
-    redirect_to companions_path, status: :see_other
+    redirect_to root_path, status: :see_other
   end
 
   private
