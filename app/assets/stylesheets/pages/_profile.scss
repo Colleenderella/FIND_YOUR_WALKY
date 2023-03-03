@@ -7,13 +7,15 @@ display: flex;
 // grid-gap: 18px;
 text-align: center;
 margin: 20px auto;
+justify-content: center;
+
 }
 
 .profile-cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 18px;
-  align-items: center;
+  justify-content: center;
 }
 
 .profile-card {
@@ -22,10 +24,11 @@ margin: 20px auto;
   height: auto;
   border: 1px solid $yellow;
   border-radius: 15px;
-  margin: auto;
-
+  margin: auto 15px;
 }
+
 .card-header {
+  height: 50px;
   background-color: $light-yellow;
 }
 
@@ -52,8 +55,8 @@ margin: 20px auto;
 }
 
 .card-profile-companion {
-  background-color: $background-gray;
-  border: 2px solid $yellow;
+  background-color: $card-background-gray;
+  border: 1px solid $yellow;
   border-radius: 15px;
   box-shadow: 0 0 5px $light-gray;
   width: 250px;
