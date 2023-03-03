@@ -1,5 +1,5 @@
 class CompanionsController < ApplicationController
-  before_action :set_companion, only: [:show, :destroy]
+  before_action :set_companion, only: [ :show, :destroy ]
 
   # def index
   #   @companions = Companion.all

@@ -32,16 +32,15 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   width: 500px;
-  height: 40px;
+  // height: 40px;
   margin: 75px auto;
   background: white;
   background: rgba(0,0,0,.2);
   border-radius:  3px;
   border: 1.5px solid #fff;
 
-}
 
-  input {
+  .search-input {
     width: 370px;
     padding: 10px 5px;
     float: left;
@@ -55,20 +54,20 @@
     }
   }
 
-  button {
+  .search-button {
     position: relative;
     float: right;
     border: 0;
     padding: 0;
     cursor: pointer;
-    height: 40px;
+    // height: 40px;
     width: 120px;
     color: white;
     background: transparent;
     border-left: 1px solid #fff;
     border-radius: 0 3px 3px 0;
     &:hover {
-      background: #fff;
+      // background: #fff;
       color:#444;
     }
     &:active {
@@ -78,5 +77,6 @@
       outline: 0;
     }
   }
+}
 
 // SEARCH ENDS

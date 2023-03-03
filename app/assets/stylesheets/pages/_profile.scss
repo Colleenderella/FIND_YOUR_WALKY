@@ -2,24 +2,40 @@
 
 .profile-page-container {
 background-color: $background-gray;
+display: flex;
+// grid-template-columns: 1fr 1fr;
+// grid-gap: 18px;
 text-align: center;
+margin: 20px auto;
+justify-content: center;
+
+}
+
+.profile-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 18px;
+  justify-content: center;
 }
 
 .profile-card {
-  width: 400px;
-  height: 600px;
+  padding: 0 20px 20px 20px;
+  max-width: 600px;
+  height: auto;
   border: 1px solid $yellow;
   border-radius: 15px;
-  margin: auto;
-
+  margin: auto 15px;
 }
+
 .card-header {
+  height: 50px;
   background-color: $light-yellow;
 }
 
 .profile-card h1 {
   font-size: 24;
   color: $yellow;
+
 }
 
 .profile-card h3 {
@@ -27,8 +43,56 @@ text-align: center;
   color: $light-gray;
   text-align: left;
   padding-left: 10px;
+  padding-top: 20px;
 }
 .profile-card ul li {
   text-decoration: none;
   color: $pink;
+}
+
+.profile-card img {
+  width: 30px;
+}
+
+.card-profile-companion {
+  background-color: $card-background-gray;
+  border: 1px solid $yellow;
+  border-radius: 15px;
+  box-shadow: 0 0 5px $light-gray;
+  width: 250px;
+  min-height: 350px;
+  // padding: 20px;
+
+}
+
+.card-profile-companion-image-container {
+  // width: 240px;
+  height: 200px;
+  overflow: hidden;
+  text-align: center;
+  margin: 5px 5px 5px 5px;
+
+}
+.card-profile-companion img {
+  object-fit: cover;
+  // object-position: center;
+  height: 100%;
+  width: 95%;
+  border-radius: 15px;
+}
+
+.card-profile-companion-content h3 {
+  font-size: 18px;
+  font-weight: lighter;
+  margin: 0;
+  color: black;
+  text-align: center;
+}
+
+.profile-card .btn-flat {
+  padding: 2px 6px;
+}
+
+.profile-card .btn-grey {
+  padding: 2px 6px;
 }
