@@ -28,14 +28,32 @@ justify-content: center;
 }
 
 .card-header {
-  height: 50px;
-  background-color: $light-yellow;
+  // height: 25px;
+  // background-color: $light-yellow;
+    width: 80%;
+    margin: 10vw;
+    font-size: 10vw;
+  @media screen and (min-width: 40em) {
+    body {
+      width: 50%;
+    }
+    .heading {
+      font-size: 6vw;
+    }
+    background-image: linear-gradient(120deg, $light-yellow 0%, $yellow 40%);
+    // background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 100%;
+    // transition: background-size 0.25s ease-in;
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
 }
 
 .profile-card h1 {
   font-size: 24;
   color: $yellow;
-
 }
 
 .profile-card h3 {
