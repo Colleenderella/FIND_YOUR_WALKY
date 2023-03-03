@@ -31,6 +31,7 @@
 }
 
 .banner h1 {
+  font-family: $headers-font;
   color: $yellow;
   margin: 0;
   text-align: center;
@@ -39,6 +40,7 @@
 }
 
 .banner p {
+  font-family: $headers-font;
   font-size: 30px;
   text-align: center;
   color: $light-yellow;
