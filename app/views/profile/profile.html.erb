@@ -9,7 +9,9 @@
 
       <div class="profile-cards-container">
         <% @companions.each do |companion| %>
-          <div class="card-profile-companion">
+          <div class="card-profile-companion" >
+        <%= link_to companion do %>
+            <%# <%= link_to companion_path(companion) %>
             <div class="card-profile-companion-image-container">
               <% if companion.photo.attached? %>
                 <%= cl_image_tag companion.photo.key, crop: :fill , class: "card-image-container img" %>
@@ -19,11 +21,12 @@
                 >
               <% end %>
             </div>
+             <% end %>
             <div class="card-profile-companion-content">
 
               <%# <% companion.bookings.each do |booking| %>
             <%# <% if booking.status == "pending" %>
-            <p><%= link_to companion.name, companion_path(companion) %>
+            <p><%= companion.name %>
               <% companion.bookings.each do |booking| %>
               's walk is <%= booking.status %></p>
               <% end %>
@@ -44,10 +47,10 @@
                     <% end %>
                   <% end %>
                   <% end %>
-
             </div>
           </div>
         <% end %>
+
       </div>
   </div>
 
