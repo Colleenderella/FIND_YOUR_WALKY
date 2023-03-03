@@ -1,10 +1,11 @@
 .footer {
   text-align: center;
-  padding: 60px;
+  align-items: center;
+  padding: 20px 20px;
   background-color: $gray;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
-  max-height: 130 px;
+  height: 100px;
 }
 
 .footer a {
@@ -27,4 +28,3 @@
   min-height: 100vh;
   padding-top: 50px;
 }
-
