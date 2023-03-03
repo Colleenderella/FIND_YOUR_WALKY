@@ -21,7 +21,7 @@
             <%= image_tag "logo_dino_big_left.png", id: "logo", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Home", root_path, class: "dropdown-item" %>
-              <%= link_to "Add companion", new_companion_path, class: "dropdown-item" %>
+              <%= link_to "Add your Walky", new_companion_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
 
             </div>
