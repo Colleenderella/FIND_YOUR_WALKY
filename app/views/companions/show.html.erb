@@ -1,37 +1,20 @@
-<html>
-<body>
-  <%# <h1><%=@companion.companion_type%>
   <div class="blog-wrapper">
     <div class="blog-card-show">
-      <div class="card-show-img"><img src="https://images.unsplash.com/photo-1583867195148-e869329c07b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dCUyMHJleHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60">
-        <h1><%=@companion.name%></h1>
-<%# <h1>Hi, my name is <%= @companion.name %>
-<%# <h3>I´m a <%= @companion.companion_type %>
-<%# <img src="https://images.unsplash.com/photo-1583867195148-e869329c07b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dCUyMHJleHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" class="img-thumbnail w-25 p-3"> %>
-<div class="container">
-  <div class="card-show mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <% if @companion.photo.attached? %>
-          <%= cl_image_tag @companion.photo.key, crop: :fill , class: "card-image-container img" %>
+      <div class="card-show-img">
+      <% if @companion.photo.attached? %>
+        <%= cl_image_tag @companion.photo.key, crop: :fill, class: "img"%>
         <% else %>
-            <img
-              src="https://images.unsplash.com/photo-1556316918-880f9e893822?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
-              >
+        <img src="https://images.unsplash.com/photo-1556316918-880f9e893822?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+        >
         <% end %>
-
-        <%# <img src="https://images.unsplash.com/photo-1583867195148-e869329c07b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dCUyMHJleHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" class="img-fluid rounded-start" alt="..."> %>
+        <h1><%=@companion.name%></h1>
       </div>
-      <div class="card-show-details"><span><i class="fa fa-calendar"></i>MAR 3</span><span><i class="fa fa-heart"></i>102</span></div>
+      <%# <div class="card-show-details"><span><i class="fa fa-calendar"></i>MAR 3</span><span><i class="fa fa-heart"></i>102</span></div> %>
       <div class="card-show-text"><p><%=@companion.offer_details%></p></div>
       <div class="read-more"><%= link_to "Book #{@companion.name}", new_companion_booking_path(@companion)%>
       </div>
     </div>
-
-
-
-
-
+    </div>
 
     <%= link_to "Delete this companion", companion_path(@companion), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 

@@ -25,3 +25,5 @@ module FINDYourWalky
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+
