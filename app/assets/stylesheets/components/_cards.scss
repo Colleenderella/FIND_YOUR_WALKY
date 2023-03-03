@@ -7,7 +7,7 @@
 
 .card {
   background-color: $card-background-gray;
-  border: 2px solid $yellow;
+  border: 1px solid $yellow;
   border-radius: 15px;
   box-shadow: 0 0 5px $light-gray;
   width: 300px;
@@ -55,7 +55,7 @@
   opacity: .7;
   margin-bottom: 20px;
   margin-top: 20px;
-  padding: 15px;
+  padding: 10px;
   // overflow-wrap: break-word;
   overflow: hidden;
   white-space: nowrap; /* Don't forget this one */
