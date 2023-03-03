@@ -29,6 +29,7 @@
             <p><%= companion.name %>
               <% companion.bookings.each do |booking| %>
               's walk is <%= booking.status %></p>
+              <p><%= booking.date %></p>
               <% end %>
 
                <%# <p><%= link_to companion.name, companion_path(companion) %>

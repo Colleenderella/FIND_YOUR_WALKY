@@ -13,13 +13,14 @@
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Messages</a>
+            <%= link_to "My Profile", profile_path, class: "nav-link" %>
+
+            <%# <a href="#" class="nav-link">Messages</a> %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "logo_dino_big_left", id: "logo", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Home", root_path, class: "dropdown-item" %>
-              <%= link_to "My Profile", profile_path, class: "dropdown-item" %>
               <%= link_to "Add companion", new_companion_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
 
