@@ -1,11 +1,11 @@
 <div class="container">
-  <h1>Request your Companion</h1>
+  <h1>Request your Walky</h1>
 
   <%= simple_form_for [@companion, @booking] do |f| %>
-    <%= f.input :location, class: "input-field", input_html: { size: 20}%>
+    <%= f.input :location, as: :select, collection: ["Berlin", "Hamburg", "Cologne"], class: "input-field" %>
     <p>Date: <%= f.date_field :date, class: "input-field" %>
-    Time: <%= f.time_field :time, class: "input-field" %>
-    <%= f.submit class: "btn btn-flat"%> </p>
+    Time: <%= f.time_field :time, class: "input-field" %>  
+    <%= f.submit class: "btn btn-flat"%></p>
   <% end %>
 
 </div>
