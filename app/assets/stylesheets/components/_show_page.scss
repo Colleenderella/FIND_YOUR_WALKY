@@ -1,13 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto|Slabo+27px);
-
-// body{
-// 	background:#ececec;
-// }
-
 h1{
 	font-size:32px;
 	margin-top:30px;
-	font-family: 'Oswald', sans-serif;
 	text-align:center;
 }
 .blog-wrapper{
@@ -22,7 +15,8 @@ h1{
 		max-width:300px;
 		margin:15px;
 		background:#fff;
-		border:1px solid #b4b1b1;
+		border:1px solid $yellow;
+    border-radius: 15px;
 		text-align:center;
 		cursor:pointer;
 		&:hover{
@@ -47,6 +41,7 @@ h1{
 				width:100%;
 				border-bottom:4px solid #e9c810;
         object-fit: fill;
+        border-radius: 15px;
 			}
 
 			&:before{
@@ -67,13 +62,11 @@ h1{
 				font-size:42px;
 				bottom:15px;
 				width:100%;
-				color:#fff;
-				font-family: 'Slabo 27px', serif;
+				color: $yellow;
 			}
 		}
 		.card-show-details{
 			margin-top:30px;
-			font-family: 'Roboto', sans-serif;
 			color:#3C3C3C;
 
       span {
@@ -85,7 +78,6 @@ h1{
 		}
 		.card-show-text{
 			padding:30px 15px;
-			font-family: 'Roboto', sans-serif;
 			line-height:22px;
 		}
 		.read-more{
@@ -94,14 +86,21 @@ h1{
 			width:auto;
 			text-align:center;
 			text-transform:uppercase;
-			background:#e9c810;;
-			color:#fff;
-			padding:15px;
+			background: $yellow;
+      color: black;
+			padding:8px 24px;
+      border-radius: 4px;
 			margin-bottom:30px;
-			font-family: 'Oswald', sans-serif;
-			&:hover{
-				background: darken(#e9c810, 20%);
-			}
+			& a{
+        color: black;
+      }
+      &:hover{
+        background: $pink;
+        color: white;
+      }
+      & a:hover  {
+        color: white;
+      }
 		}
 	}
 }
