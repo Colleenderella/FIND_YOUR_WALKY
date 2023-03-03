@@ -1,46 +1,83 @@
+    <div class="card-header">
+      <h1>Welcome to your profile page</h1>
+    </div>
 <div class="profile-page-container">
-<div class="profile-card">
-  <div class="card-header">
-    <h1>Welcome to your profile page</h1>
+  <div class="profile-card">
       <%# <%= current_user.email %>
+
+    <h3>My Companions:</h3>
+
+      <div class="profile-cards-container">
+        <% @companions.each do |companion| %>
+          <div class="card-profile-companion">
+            <div class="card-profile-companion-image-container">
+              <% if companion.photo.attached? %>
+                <%= cl_image_tag companion.photo.key, crop: :fill , class: "card-image-container img" %>
+              <% else %>
+                <img
+                src="https://images.unsplash.com/photo-1556316918-880f9e893822?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                >
+              <% end %>
+            </div>
+            <div class="card-profile-companion-content">
+
+              <%# <% companion.bookings.each do |booking| %>
+            <%# <% if booking.status == "pending" %>
+            <p><%= link_to companion.name, companion_path(companion) %>
+              <% companion.bookings.each do |booking| %>
+              's walk is <%= booking.status %></p>
+              <% end %>
+
+               <%# <p><%= link_to companion.name, companion_path(companion) %>
+              <%# 's walk for <%= booking.date %>
+              <%# is <%= booking.status</p> %>
+
+              <% companion.bookings.each do |booking| %>
+                <% if booking.status == "pending"  %>
+                  <%= link_to booking_accept_path(booking) do %>
+                    <div class="btn btn-flat">Accept</div>
+                    <%# <i class="fa-regular fa-square-check"></i> %>
+                    <% end %>
+                  <%= link_to booking_decline_path(booking) do %>
+                    <div class="btn btn-grey">Decline</div>
+                    <%# <i class="fa-solid fa-square-check"></i> %>
+                    <% end %>
+                  <% end %>
+                  <% end %>
+
+            </div>
+          </div>
+        <% end %>
+      </div>
   </div>
 
-<h3>My Companions:</h3>
+<div class="profile-card">
+    <h3>My Bookings:</h3>
 
-<ul>
-  <% @companions.each do |companion| %>
-    <li><%= link_to companion.name, companion_path(companion) %>
-      <ul>
-        <% companion.bookings.each do |booking| %>
-        <li>
-          <div>
-            <% if booking.status == "pending"  %>
-              <%= link_to booking_accept_path(booking) do %>
-                <i class="fa-regular fa-square-check"></i>
+    <div class="profile-cards-container">
+        <% @bookings.each do |booking| %>
+          <div class="card-profile-companion">
+            <div class="card-profile-companion-image-container">
+              <% if booking.companion.photo.attached? %>
+                <%= cl_image_tag booking.companion.photo.key, crop: :fill , class: "card-image-container img" %>
+              <% else %>
+                <img
+                src="https://images.unsplash.com/photo-1556316918-880f9e893822?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                >
               <% end %>
-              <%= link_to booking_decline_path(booking) do %>
-                <i class="fa-solid fa-square-check"></i>
-              <% end %>
+            </div>
+            <div class="card-profile-companion-content">
+            <% if booking.status == "pending" %>
+            <p>Your walk with <%= link_to booking.companion.name, companion_path(booking.companion) %>
+             is <%= booking.status %></p>
             <% else %>
-              <%= booking.user.email %>
-            <% end %>
+              <p>Your walk with <%= link_to booking.companion.name, companion_path(booking.companion) %> on
+              <%= booking.date %> is <%= booking.status %></p>
+              <% end %>
+            </div>
           </div>
-        </li>
         <% end %>
-      </ul>
-    </li>
-  <% end %>
-</ul>
-
-<h3>My Bookings:</h3>
-
-<ul>
-  <% @bookings.each do |booking| %>
-    <li>
-      <%= link_to booking.companion.name, companion_path(booking.companion) %>
-      <%= booking.date %>
-    </li>
-  <% end %>
-</ul>
-</div>
+      </div>
+  </div>
+  </div>
 </div>
