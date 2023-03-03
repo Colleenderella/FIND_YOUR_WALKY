@@ -12,5 +12,4 @@ Rails.application.routes.draw do
 
   get '/bookings/:id/accept', to: 'bookings#accept', as: 'booking_accept'
   get '/bookings/:id/decline', to: 'bookings#decline', as: 'booking_decline'
-
 end
